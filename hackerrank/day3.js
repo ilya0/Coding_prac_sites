@@ -62,7 +62,13 @@ function readLine() {
 //  and  is even, so it isn't weird. Thus, we print Not Weird.
 /////////////// ignore above this line ////////////////////
 
-function main(n) {
+
+// 1,3,5 // weird
+// 2,4 // not wierd
+// 6,8,10,12,14,16,18 // Weird
+// even& 20<  // not weird
+// Weird // wird
+function main() {
     var N = parseInt(readLine());
 
 }
