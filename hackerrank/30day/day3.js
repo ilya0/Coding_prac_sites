@@ -1,23 +1,20 @@
-function main(n) {
-    var N = n;
+function main() {
+    var N = parseInt(readLine());
 
 
 if(N%2!=0){
-  return "Weird";
+  console.log("Weird");
     }else if(N>=2&&N<=5){
-    return "Not Weird";
+    console.log("Not Weird");
         }else if(N>=6&&N<=20){
-        return "Weird";
+        console.log("Weird");
         }else if(N>=20){
-        return "Not Weird";
+        console.log("Not Weird");
         }else{
-        return "this isn't suppose to happen";
+        console.log("this isn't suppose to happen");
         }
 
 
 
 
 }
-
-
-main(3);
