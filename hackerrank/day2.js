@@ -1,4 +1,5 @@
 function totalCost(mealCost,tipPercentage,taxPercentage){
-    var total = ((mealcost*(tipPercentage/100))+(mealcost+(taxPercentage/100))+mealCost);
-        console.log(total);
+    var total = ((mealCost*(tipPercentage/100))+(mealCost+(taxPercentage/100))+mealCost);
+
+        return "The total meal cost is " +total+ " dollars";
 }
