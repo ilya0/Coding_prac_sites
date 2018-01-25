@@ -1,0 +1,19 @@
+body {
+    background-color: blue;
+    color: #333;
+    font-family: 'Raleway', sans-serif;
+    font-weight:400;
+  }
+  
+  .quotebox{
+    background-color:white;
+    height:100px;
+    width: 450px;
+    position:relative;
+    margin:10% auto auto auto;
+  }
+  
+  .quotetext{
+    margin:10% auto auto auto;
+    border:5px solid black;
+  }
