@@ -1,7 +1,5 @@
 function translatePigLatin(str) {
 
-    var begining = "";
-    var ending = "";
     var consonants = ['a', 'e', 'i', 'o', 'u'];
     var consCount = [];
     var startcut;
@@ -17,17 +15,27 @@ function translatePigLatin(str) {
 
 
     splitstring = str.split("");
-    for (i = 0; i < splitstring.length; i++) {
-        if (consonants.indexOf(splitstring[i]) != -1) {
-            consCount.push(i);
+
+    if (consonants.indexOf(splitstring[0]) == -1) {
+
+        for (i = 0; i < splitstring.length; i++) {
+            if (consonants.indexOf(splitstring[i]) != -1) {
+                consCount.push(i);
+            }
+            startcut = consCount[0];
+
+
         }
+        return str.substr(startcut, str.length) + str.substr(0, startcut) + "ay";
+
+    } else {
+
+        return str + "way";
+
+
     }
 
 
-
-    startcut = consCount[0];
-
-    return str.substr(startcut, str.length) + str.substr(0, startcut) + "ay";
 }
 
-translatePigLatin("algorithm"); //cons at 1,4,6
+translatePigLatin("glove"); //cons at 1,4,6
