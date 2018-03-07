@@ -7,8 +7,13 @@ var strlength ="";
 
 
 function fearNotLetter(str) {
-   matchstring = lettermap.splice(lettermap.indexOf(lettermap),str.length);
-  strlength = str.length;
+   matchstring = lettermap.slice(lettermap.indexOf(str[0]),str.length);
+
+  for(i=0; i< str.length; i++){
+    if(str[i] !== matchstring[i]){
+      return matchstring[i];
+    }
+  }
 
   
   return matchstring;
