@@ -25,31 +25,37 @@ var collection = {
       "album": "ABBA Gold"
     }
 };
+
+
 // Keep a copy of the collection for tests
 var collectionCopy = JSON.parse(JSON.stringify(collection));
 
 // Only change code below this line
 function updateRecords(id, prop, value) {
    //if artists
-  if(prop == "artist"){
-    // if the property is artists then set value to artist
-    if(prop == ""){
-      //do nothing
-    }else{
-       collection[id].artist = value;
-    }
-   
+  if(prop == "artist" && value != ""){
     
-  }else if(prop == "tracks"){
-    //if prop is tracks check for undefined, set new or push a new track
+           collection[id].artist = value;
+  
+
     
-    if(collection[id].tracks == "undefined"){ 
-        collection[id].push({'tracks': []});
-      }else{
-        //nothing
-      }
-    //push a new track
-    collection[id].tracks.push(value);
+  }else if(prop == "tracks" && value !== ""){
+    //if prop is tracks check for undefined, set new 
+
+    if(collection[id].tracks === undefined) collection[id].tracks = []; 
+ 
+      //take tracks save to var
+      var temptracks = collection[id].tracks;
+      // add tracks to var
+      console.log("saved tracks from collection -  " +temptracks);
+      temptracks = temptracks + value;
+      console.log("temptracks, value - "+ temptracks, value );
+      // set var equal to tracks in obj
+    collection[id].tracks = [temptracks];
+    
+    
+    
+  
   }else{
     return "nothing done";
   }
@@ -60,4 +66,4 @@ function updateRecords(id, prop, value) {
 }
 
 // Alter values below to test your code
-updateRecords(1245, "tracks", "Addicted to Love");
+updateRecords(2548, "tracks", "");
