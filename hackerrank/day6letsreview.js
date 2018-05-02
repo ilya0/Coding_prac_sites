@@ -1,13 +1,36 @@
 function processData(input) {
     //Enter your code here
     var lines = input[0]
-    var words = input.substring(2, input.length);
-    var printarray = []
-    var temp = ""
-    for (var i = 0; i < words.length; i + ) {
+    var words = input.split(" ");
+    var odd = ""
+    var even = ""
+    console.log(words);
+
+    //word loop
+    for (var i = 1; i < words.length; i++) {
+
+        //seperator loop
+        for (var j = 0; j < words[i].length; j++) {
+            ///if even or 0 
+            if (j === 0 || j % 2 === 0) {
+                even = even + words[i][j];
+            } else {
+                odd = odd + words[i][j];
+            }
+
+        }
+        console.log(even, odd);
+        even = "";
+        odd = "";
 
     }
-    console.log(words);
+    //take the first word
+    //seperate into odd and even
+    //print odd
+    //print even
+    //page break
+    //repeate process
+
 
 
 
@@ -19,6 +42,7 @@ function processData(input) {
 
 
 }
+processData("2 Hacker Rank")
 
 process.stdin.resume();
 process.stdin.setEncoding("ascii");
