@@ -23,17 +23,19 @@ function telephoneCheck(str) {
        console.log("letter found");
         return true;
         
-      }else if(isNaN(string[0]) == true){
+      }else if(isNaN(str[0]) == true && str[0] !="(" ){
+        console.log("str0 is"+str[0] );
                return false;
-       }else if(string){
-         //need case for matching paren
        }
+    
+    //else if(string){  //need case for matching paren  }
     
     
     
     
     
     else{
+      console.log("no cases found");
          return true;
        }
        
@@ -45,4 +47,4 @@ function telephoneCheck(str) {
   
   
   
-  telephoneCheck("1 555)555-5555");
+  telephoneCheck("5555555555");
