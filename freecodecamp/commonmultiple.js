@@ -1,4 +1,9 @@
 
+
+
+///infinate loop issue
+
+
 function smallestCommons(arr) {
   var arr1 = []; // initiate array 1
   var arr2 = []; // init array 2
