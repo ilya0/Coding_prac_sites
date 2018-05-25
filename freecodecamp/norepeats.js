@@ -1,45 +1,60 @@
 
 function permAlone(str) {
-  var permArray = []; // arry to store all the permuations
-  var strArray = str.split("") //intial string array
-  var currentLetter;
+    var allPerms = []; // arry to store all the permuations
+    var strArray = str.split(""); //intial string array
+    var currentLetter;
+    
+      //go through initail string 
+      for(i=0; i < strArray.length; i++){//iterate through the array
+        currentLetter = strArray[i];
+        //console.log("currentletter is "+currentLetter);
+        
+        if(allPerms.length == 0){ 
+          // if the array is zero just push in
+          allPerms.push(currentLetter);
+        }else{
+              
+                    var tempArray = []; // this is to hold all the permuations
+                   
   
-    //go through initail string 
-    for(i=0; i < strArray.length; i++){//iterate through the array
-      currentLetter = strArray[i];
-      console.log(currentLetter);
-      
-      if(permArray.length == 0){ 
-        // if the array is zero just push in
-        permArray.push(currentLetter);
-      }else{
-        console.log("creaing perm");
-        createPerm();
+                    for(index = 0; index < allPerms.length; index++){ //int array stores perms 
+                      
+                        var tempholder = []; //temp holder for current current element
+  
+                        //set tempholder to all perms
+                        tempholder = allPerms.slice(0); //copy existing perms 
+                        console.log("tempholder = allPerms ")
+                        console.log(tempholder);
+  
+                        //splice currentletter to index
+                       tempholder.splice(index,0,currentLetter); 
+                        console.log("tempholder after splice ")
+                        console.log(tempholder)
+  
+  
+                        var conCat = tempholder.join(''); //join all array ['a','b'] = 'ab'
+                        console.log("conCat "+conCat); 
+                        tempArray.push(conCat);
+                        console.log("temparray is")
+                        console.log(tempArray);
+  
+                        allPerms = tempArray;
+                    //coppy int array to new array
+                    
+  
+                      }
+                  
+  
+                
+          
+        }
       }
+  
+    // creates iteration and saves in the array
+  
+    
+    return allPerms;
     }
-
-  // creates iteration and saves in the array
-    function createPerm(){
-      var tempArray = []; // this is to hold all the permuations
-      console.log("Go through permuations");
-
-      for(i=0; i < permArray.length; i++){
-      var tempholder = permArray; //copy existing perms
-      tempholder = tempholder.splice(i,1,currentLetter); //splice currentletter to index
-      tempholder = tempholder.join(''); //join all array
-      tempArray.push(tempholder);
-        //use currentLetter and create a permutation
-        // i is the index where the number is placed
-        // concatinated with currentLetter
-        // push into temp array
-
-      }
-      return permArray = tempArray;
-        // save permArray to be tempArray
-    }
-  
-  return permArray;
-  }
-  
-  permAlone('aab');
-  
+    
+    permAlone('aabc');
+    
