@@ -32,17 +32,23 @@ function updateRecords(id, prop, value) {
 
 //if value = "" and prop != "", delete prop
 
-if(prop == "tracks" && collection[id].tracks == "undefined" && value != ""){
+if(prop == "tracks" && collection[id].tracks === undefined && value != ""){
 //if prop = tracks and tracks = null, tracks = [] and add to empty array
 collection[id].tracks = [];
 collection[id].tracks.push(value);
-}else if(prop == "tracks" && collection[id].tracks != "undefined"){
-// if prop = trackks and tracks = [], push tracks
-collection[id].tracks.push(prop);
 
-}else if( prop == "artist"){
+}else if(prop == "tracks" && collection[id].tracks != undefined && value !=""){
+// if prop = trackks and tracks = [], push tracks
+
+collection[id].tracks.push(value);
+
+}else if( prop == "artist" && value != "" ){
 collection[id].artist = value;
 
+}else if( prop == "artist" && value == ""){
+delete collection[id].artist;
+}else if( prop == "tracks" && value == ""){
+delete collection[id].tracks;
 }
 return collection;
 }
@@ -50,5 +56,4 @@ return collection;
 
 
 // Alter values below to test your code
-updateRecords(5439, "artist", "ABBA");
-
+updateRecords(2468, "tracks", "Free");
