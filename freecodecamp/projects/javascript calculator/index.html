@@ -9,48 +9,48 @@
     <script src="main.js"></script>
 </head>
 
+
 <body>
     
-
-    <input class = "display"></input>
-
-
-    <body>
+        <form name="form">
+            <input class="textview" name="textview">
+        <form>
+      
+        <div class = "main">
     
-
-            <input class = "display"></input>
-        
-            <div class = "main">
-        
-            <table>
-                <tr>
-                    <td><input type = "button" value="7"></td>
-                    <td><input type = "button" value="8"></td>
-                    <td><input type = "button" value="9"></td>
-                    <td><input type = "button"value="/"></td>
-                </tr>
-        
-                <tr>
-                    <td><input type = "button" value="4"></td>
-                    <td><input type = "button" value="5"></td>
-                    <td><input type = "button" value="6"></td>
-                    <td><input type = "button"value="*"></td>
-                </tr>
-        
-                <tr>
-                    <td><input type = "button" value="1"></input></td>
-                    <td><input type = "button" value="2"></input></td>
-                    <td><input type = "button" value="3"></input></td>
-                    <td><input type = "button"value="-"></input></td>
-                </tr>
-                <tr>
-                    <td><input type = "button" value="0"></input></td> 
-                    <td><input type = "button" value="."></input></td>
-                    <td><input type = "button" value="="></input></td>
-                    <td><input type = "button"value="+"></input></td>
-                </tr>
-            </table>
-        </div>
-        </body>
+        <table>
+                  <tr>
+                <td><input class="button" type = "button" value="Clear" onclick="c()"></td>
+                <td><input class="button" type = "button"value="%" onclick="insert('%')"></td>
+            </tr>
+            <tr>
+                <td><input class="button" type = "button" value="7" onclick="insert(7)"></td>
+                <td><input class="button" type = "button" value="8" onclick="insert(8)"></td>
+                <td><input class="button" type = "button" value="9" onclick="insert(9)"></td>
+                <td><input class="button" type = "button"value="/" onclick="insert(/)"></td>
+            </tr>
+    
+            <tr>
+                <td><input class="button" type = "button" value="4" onclick="insert(4)"></td>
+                <td><input class="button" type = "button" value="5" onclick="insert(5)"></td>
+                <td><input class="button"  type = "button" value="6" onclick="insert(6)"></td>
+                <td><input class="button" type = "button"value="*" onclick="insert('*')"></td>
+            </tr>
+    
+            <tr>
+                <td><input class="button" type="button" value="1" onclick="insert(1)"></input></td>
+                <td><input class="button" type = "button" value="2" onclick="insert(2)"></input></td>
+                <td><input class="button"  type = "button" value="3" onclick="insert(3)"></input></td>
+                <td><input class="button" type = "button"value="-" onclick="insert('-')"></input></td>
+            </tr>
+            <tr>
+                <td><input class="button" type = "button" value="0" onclick="insert(0)"></input></td> 
+                <td><input class="button" type = "button" value="." onclick="insert('.')"></input></td>
+                <td><input class="button" type = "button" value="=" onclick="equal()"></input></td>
+                <td><input class="button" type = "button"value="+" onclick="insert('+')"></input></td>
+            </tr>
+        </table>
+    </div>
+    </body>
 </html>
 </html>
