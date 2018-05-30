@@ -41,6 +41,11 @@ function starttimer(){
     
 }
 
+function reset(){
+     $("#breaktimecounter").html(5);
+   $("#sessionnumbercounter").html(5);
+  $("#sessiontimecounter").html(5);
+}
 
 function timeraction(){
    console.log("timeraction")
@@ -51,7 +56,8 @@ function timeraction(){
         }else if(timer===0){ //if timer hits 0 do this stuff
           console.log("stop hit");
            setupbreaktime();
-            clearInterval(intcount);
+            clearInterval(intcount);// this needs to be last otherwise it stops all the intervals on the page
+          
             
 
             //var startBreak = setInterval(breakTimeraction,1000);
