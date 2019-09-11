@@ -31,8 +31,8 @@ for(let i=0; i < arrayA.length; i++){ //iterate through the array and create a r
         alert('Even Number');
         console.log(storagearray)
         var split = storagearray.length /2;
-       
-        var median = (storagearray[split]+storagearray[split+1])/2
+
+        var median = ( storagearray[split]+storagearray[split-1] )/2
         console.log("median for even is", median); 
         storagearray = [];
 
