@@ -11,12 +11,16 @@
 
 package kata
 
+import(
+	"fmt"
+	"strings"
+)
 
 
 func bandNameGenerator(word string) string {
 // Happy coding
 
-return word[0]
+fmt.PrintLn(strings.Title(word))
 
 }
 
