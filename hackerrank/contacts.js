@@ -1,11 +1,32 @@
-/*
-We're going to make our own Contacts application! The application must perform two types of operations:
+function contacts(queries){
+    var storagearray =[];
+    var matchcount = 0;
+        for(let i = 0; i < queries.length; i++){
+    
+                if(queries[i][0] == 'add'){
+                    console.log("pushing to storage " +queries[i][0])
+                    storagearray.push(queries[i][1])
 
-add name, where  is a string denoting a contact name. This must store  as a new contact in the application.
-find partial, where  is a string denoting a partial name to search the application for. It must count the number of contacts starting with  and print the count on a new line.
+                    console.log(storagearray);
+                }else{
 
-*/
+                    //search for term
+                    console.log('searching for', queries[i][1]);
+                    
+                    //find partials
+                    for(let v = 0; v < storagearray.length; v++){
+                        
+                        var index = storagearray[v].search(queries[i][1])
+                   
+                        if(index == 0 ){ matchcount++ }
+
+                    }
+                    console.log(matchcount)
+                    matchcount = 0;
 
 
-//must create a contact with name in application
-// find partial of the name input
+                }
+
+            
+        }
+}
