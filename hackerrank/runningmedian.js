@@ -21,11 +21,13 @@ for(let i=0; i < arrayA.length; i++){ //iterate through the array and create a r
 
     if(storagearray.length == 0){
         alert("error");
+        return "error";
     }
     else if(storagearray.length == 1){
         console.log(storagearray)
         console.log("median for one element is", storagearray[0]);
         storagearray = [];
+        return storagearray[0];
 
     }else if ( storagearray.length % 2 == 0) {
         alert('Even Number');
@@ -35,6 +37,7 @@ for(let i=0; i < arrayA.length; i++){ //iterate through the array and create a r
         var median = ( storagearray[split]+storagearray[split-1] )/2
         console.log("median for even is", median); 
         storagearray = [];
+        return median;
 
     }else{
         alert('Odd Number');
@@ -42,6 +45,7 @@ for(let i=0; i < arrayA.length; i++){ //iterate through the array and create a r
         var median = storagearray[Math.round((storagearray.length - 1) / 2)];
         storagearray = [];
         console.log("median odd number elements is", median);
+        return median;
     }
 
 
