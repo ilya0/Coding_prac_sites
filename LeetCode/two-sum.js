@@ -3,12 +3,6 @@
  * @param {number} target
  * @return {number[]}
  */
-
-
- twoSum( [1,2,3,4], 5);
-
-
-
 var twoSum = function(nums, target) {
     //create var to hold first place
     //create var b to sold second place
@@ -20,18 +14,15 @@ var twoSum = function(nums, target) {
     var counterarray = [];
 
     for(start = 0; start < nums.length; start++){
-    
+      
         
-        for(end = 1; end < nums.length; end++){
+        for(end = start+1; end < nums.length; end++){
 
             if(nums[start] + nums[end] == target){
 
                 counterarray.push(start);
                 counterarray.push(end);
-            console.log(start,end);
-                    return (counterarray)
-                }else{
-                    console.log("cycled")
+                return (counterarray);
                 }
         }
 
